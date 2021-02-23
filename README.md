@@ -11,11 +11,17 @@ npm install react-native-rn-thub-image-labelling
 ## Usage
 
 ```js
-import RnThubImageLabelling from "react-native-rn-thub-image-labelling";
+import RnThubImageLabelling from 'react-native-rn-thub-image-labelling';
 
-// ...
-
-const result = await RnThubImageLabelling.multiply(3, 7);
+RnThubImageLabelling.imageLabelDetection(
+  imagePath,
+  (data) => {
+    console.log(data);
+  },
+  (errorMessage) => {
+    console.log(errorMessage);
+  }
+);
 ```
 
 ## Contributing
