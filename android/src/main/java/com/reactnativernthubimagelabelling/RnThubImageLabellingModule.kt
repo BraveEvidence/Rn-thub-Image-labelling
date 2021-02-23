@@ -37,7 +37,7 @@ class RnThubImageLabellingModule(private val reactContext: ReactApplicationConte
             sb.append("${text}, Confidence: $confidence \n")
           }
 
-          imageLabellingSuccessCallback?.invoke(sb)
+          imageLabellingSuccessCallback?.invoke("$sb")
         }
         .addOnFailureListener { e ->
           imageLabellingFailureCallback?.invoke("${e.message.toString()}, Cannot label image")
